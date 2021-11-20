@@ -8,6 +8,10 @@ The attack is performed on two steps
   - RST Packet Spoofing
   
 ## ARP Spoofing
+  Before ARP Spoofine we need to turn on ip forwarding. To turn on ip forwarding we use the following command  
+  ```
+  sudo sysctl -w net.ipv4.ip_forward=1
+  ```
   If the server and the victim is in same LAN, we need to perform ARP Spoofing on both the server and the victim  
   ```
   g++ arp_spoofing.cpp -o arp.out -ltins  
